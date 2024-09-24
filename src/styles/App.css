@@ -1,0 +1,10 @@
+/* frontend/src/styles/App.css */
+
+.App {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    padding: 20px;
+}

@@ -1,0 +1,15 @@
+/* frontend/src/styles/Home.css */
+
+.home-page {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.date-picker-container {
+    margin-bottom: 20px;
+}
+
+.flights-list {
+    display: flex;
+    flex-direction: column;
+}

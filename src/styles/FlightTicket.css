@@ -1,0 +1,40 @@
+/* frontend/src/styles/FlightTicket.css */
+
+.flight-ticket {
+    background-color: #f8f9fa;
+    border: 2px solid #1e90ff;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flight-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.flight-details h3 {
+    margin: 0;
+    color: #1e90ff;
+}
+
+.flight-times p {
+    margin: 5px 0;
+}
+
+.reserve-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reserve-button:hover {
+    background-color: #218838;
+}
