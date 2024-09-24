@@ -335,22 +335,23 @@ app.use(cors(corsOptions));
 
 ## ACIKLAMA
 
-Proje sürecinde, Schiphol API ile entegrasyon sırasında çeşitli zorluklarla karşılaştık. Başlangıçta, API üzerinden 20 adet uçuş bilgisini başarıyla çekip rezervasyon yapabildik. Ancak, bu uçuşlar zamanla veri tabanımızdan kayboldu ve rezervasyon yapılamayan uçuşlara dönüştü. Bu durum, sistemin güvenilirliğini ve kullanılabilirliğini olumsuz etkiledi.
+Proje surusunde Schiphol API ile entegrasyon sirasinda cesitli sorunlarla karsilasdim. Baslangicta, API uzerinden 20 adet ucus bilgisini basarili bir sekilde cekip rezervasyon yapabildim. Ancak, zamanla bu ucuslar veri tabanimdan kayboldu ve rezervasyon yapilamayan ucuslara donustu. Bu durum, sistemin guvenilirligini ve kullanilabilirligini olumsuz etkiledi.
 
-API'den veri çekme konusunda yaşadığımız başlıca sorunlar şunlardır:
+API'den veri cekme konusunda yasadigim baslica sorunlar su sekildedir:
 
-- **Veri Çekilememe:** API'den alınan yanıtlar her ne kadar HTTP 200 OK statüsü dönse de, beklenen uçuş verilerini sağlamıyordu. Bu durum, kullanıcı deneyimini ciddi şekilde olumsuz etkiledi.
-  
-- **Rezervasyon Sorunları:** İlk etapta çekilen uçuş verileriyle rezervasyon işlemlerini başarılı bir şekilde gerçekleştirebildik. Ancak, sonraki denemelerde bu uçuşlar rezervasyon yapılamayan uçuşlara dönüştü ve kullanıcıların rezervasyon yapmasını engelledi.
-  
-- **Veri Tutarsızlığı:** Uçuş verilerini yeniden çekmeye çalıştığımızda, sadece rezervasyon yapılamayan uçuşlar listeleniyordu. Daha sonra bu uçuşlar da sistemden kayboldu, bu da veri tutarlılığı konusunda ciddi sorunlar yaşadığımızı gösterdi.
-  
-- **Fonksiyonel Kısıtlamalar:** Başlangıçta sadece Amsterdam Havalimanı'ndan kalkıp aynı havalimanına inen uçuşları listeleyebiliyorduk. Kalkış yeri ve varış yeri seçme gibi kullanıcı dostu özellikleri uygulamaya dahil edemedik. Ayrıca, kalkış yapan uçakların IATA kodları görünüyordu fakat hangi şehre veya ülkeye gideceği bilgisi eksikti. Aynı şekilde, iniş yapacak uçaklar için de bu bilgiler yetersizdi.
-  
-- **API Entegrasyon Problemleri:** Schiphol API ile düzgün bir entegrasyon sağlayamadık. API'nin beklenen veri formatında yanıtlar vermemesi ve sürekli değişen uçuş verileri, projenin ilerlemesini engelledi. Bu sebeple, uçuş verilerini güvenilir bir şekilde çekip yönetmekte zorlandık.
+- **Veri Cekilememe:** API'den alinmis yanitlar her ne kadar HTTP 200 OK statusu donse de, beklenen ucus verilerini saglamiyordu. Bu durum, kullanici deneyimini ciddi sekilde olumsuz etkiledi.
 
-Bu sorunlar nedeniyle, projenin temasına özen göstermeyi bir kenara bırakarak, öncelikli olarak sistemin işlevselliğini sağlamaya odaklandık. Ancak, API ile yaşanan entegrasyon problemleri ve veri tutarsızlıkları, projenin tam anlamıyla çalışır hale gelmesini engelledi. Gelecekte, daha stabil ve güvenilir bir uçuş veri sağlayıcısı ile çalışmayı planlıyoruz. Ayrıca, kullanıcı deneyimini iyileştirmek adına kalkış ve varış yerlerinin seçilebildiği, uçuş bilgilerini daha detaylı sunan özelliklerin eklenmesi hedeflenmektedir.
+- **Rezervasyon Sorunlari:** Ilk etapta cekilen ucus verileriyle rezervasyon islemlerini basarili bir sekilde gerceklestirebildim. Ancak, sonraki denemelerde bu ucuslar rezervasyon yapilamayan ucuslara donustu ve kullanicilarin rezervasyon yapmasini engelledi.
 
-Projenin mevcut durumu, uçuş verilerini güvenilir bir şekilde yönetmek ve kullanıcı dostu özellikler sunmak adına daha fazla geliştirmeye ihtiyaç duyduğunu göstermektedir. Kod ve proje yapısını inceleyenlerin, mevcut altyapının potansiyelini fark etmelerini ve bu sorunların çözümü için atılacak adımlara katkıda bulunmalarını umuyoruz.
+- **Veri Tutarsizligi:** Ucus verilerini yeniden cekmeye calistigimda, sadece rezervasyon yapilamayan ucuslar listeleniyordu. Daha sonra bu ucuslar da sistemden kayboldu, bu da veri tutarliligi konusunda ciddi sorunlar yasadigimi gosterdi.
+
+- **Fonksiyonel Kisiltirmalar:** Baslangicta sadece Amsterdam Havalimani'ndan kalkip ayni havalimanina inen ucuslari listeleyebiliyordum. Kalkis yeri ve varis yeri secme gibi kullanici dostu ozellikleri uygulamaya dahil edemedim. Ayrica, kalkis yapan ucaklarin IATA kodlari gozukuyordu fakat hangi sehre veya ulkeye gidecegi bilgisi eksikti. Ayni sekilde, inis yapacak ucaklar icin de bu bilgiler yetersizdi.
+
+- **API Entegrasyon Problemleri:** Schiphol API ile duzgun bir entegrasyon saglayamadim. API'nin beklenen veri formatinda yanitlar vermemesi ve surekli degisen ucus verileri, projenin ilerlemesini engelledi. Bu sebeple, ucus verilerini guvenilir bir sekilde cekip yonetmekte zorlandim.
+
+Bu sorunlar nedeniyle, projenin temasina ozen gosterip gosteremeyebilmek icin, oncelikli olarak sistemin islevselligini saglamaya odaklandim. Ancak, API ile yasanan entegrasyon problemleri ve veri tutarsizliklari, projenin tam anlamiyla calisir hale gelmesini engelledi. Gelecekte, daha stabil ve guvenilir bir ucus veri saglayicisi ile calismayi planliyorum. Ayrica, kullanici deneyimini iyilestirmek adina kalkis ve varis yerlerinin secilebildigi, ucus bilgilerini daha detayli sunan ozelliklerin eklenmesi hedeflenmektedir.
+
+Projeyi geliştirirken karsilastigim bu sorunlar, ucus verilerini guvenilir bir sekilde yonetmek ve kullanici dostu ozellikler sunmak adina daha fazla gelistirmeye ihtiyac duydugumu gostermektedir. Kod ve proje yapisini inceleyenlerin, mevcut altyapinin potensiyelini fark etmelerini ve bu sorunlarin cozulumu icin atilacak adimlara katkida bulunmalarini umuyorum.
+
 
 Iyi Kodlamalar! 🚀
